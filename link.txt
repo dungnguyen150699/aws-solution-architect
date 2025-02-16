@@ -1,1 +1,85 @@
 https://github.com/qmau-me/books/tree/master/.gitbook/assets -- sách
+
+
+1A developer has an application that needs to offload some tasks to be processed asynchronously. 
+What AWS Elastic Beanstalk environment tier should be used for processing the offloaded tasks? 
+ AWS Elastic Beanstalk Worker Tier is designed to process background tasks separately 
+from the main application. It consumes messages from an Amazon SQS queue to trigger 
+the background tasks. Web Server Tier, Instance Tier, Stateful Tier, 
+Multi-Node Tier, and Single-Node Tier do not directly support background task processing.
+
+2 Which of the following triggers is not supported by AWS Lambda? 
+AWS Lambda supports a wide variety of triggers, including scheduled triggers,
+ event-based triggers, batch triggers, and on-demand triggers. However, 
+on-file-based triggers are not natively supported by AWS Lambda.
+3. What is the purpose of the AWS KMS grant token? 
+-To provide temporary permission to use an AWS KMS customer master key (CMK)
+4. You have received a webhook notification about an AWS CloudWatch alarm. 
+Which of the following API actions can you use to gain information about the details of the alarm? 
+
+DescribeAlarms
+
+5 What is the HTTP response status code for a request that is blocked by AWS CloudFront? 
+: 403
+6. A company wants to receive a daily report containing a list of their S3 objects which has encryption enabled or disabled. Which S3 feature should they use? 
+ a.
+S3 Inventory
+
+7. What is the difference between an AWS CloudFormation stack and a stack set? 
+An AWS CloudFormation stack is a collection of AWS resources that you can manage as a single unit, 
+while a stack set is a way to provision CloudFormation stacks across multiple accounts and regions with a single CloudFormation template.
+
+explain: 
+An AWS CloudFormation stack is a collection of AWS resources that you can manage as a single unit, 
+while a stack set is a way to provision CloudFormation stacks across multiple accounts and regions with 
+a single CloudFormation template. With StackSets, you can centrally manage resources across all of your
+ accounts and regions by using AWS Organizations. By specifying a CloudFormation template, you can create, 
+update, or delete stacks across multiple accounts and regions with a single action.
+
+8 What is an IAM Instance Profile?
+- An IAM Instance Profile is a container for an IAM Role that you can use to pass role information to an EC2 instance when the instance starts.
+
+9 What is AWS Elastic Beanstalk? 
+- Platform as a service
+
+10.  The company wants to manage all domain names in the same Hosted Zone. How should they proceed in creating this Hosted Zone? 
+
+Create a Public Hosted Zone and add Reusable Delegation Sets for each domain
+
+Explain: Since the domain names are public, a Public Hosted Zone should be created. To manage multiple domain names in the same Hosted Zone, 
+using Reusable Delegation Sets allows for each domain to work in the same Hosted Zone. 
+The other options are not suitable for managing multiple domain names in the same Hosted Zone.
+
+11 What type of access control does DynamoDB support? 
+IAM Policies
+
+12 A development RDS instance encounters an unexpected instance failure. Unfortunately, a monitoring alert wasn't triggered. What change is required to ensure monitoring is working? 
+Create an RDS event subscription for the 'RDS-EVENT-0003' event category.
+
+13 A company has a hybrid cloud infrastructure and wants to resolve private hosted zone DNS records from on-premises DNS servers in AWS. Which AWS service should be used? 
+Route 53 Resolver
+
+
+14 A company is using AWS for critical infrastructure that must 
+remain available during regional issues. They need a global traffic management
+ solution that can route requests to multiple AWS regions and handle automatic failover
+. Which AWS service is best suited for this scenario?
+AWS Global Accelerator  // what is aws global accelerator?
+
+
+15 Which of the following AWS services can be used to automatically remediate noncompliant AWS resources? 
+- AWS Config
+
+16 What is the difference between the awsvpc and the bridge network mode in Amazon ECS? 
+The awsvpc network mode assigns every task a unique elastic network interface, while the bridge network mode shares the host's network namespace.
+
+
+17 Your company uses Amazon RDS Read Replicas for an RDS PostgreSQL database. You want to validate the replica data consistency. Which option should you choose? 
+Perform manual checksum using pg_checksums
+
+18 A company wants to automatically reduce storage costs for infrequently accessed files in their Amazon S3 bucket while ensuring high durability. Which storage class should you recommend? 
+S3 One Zone-Infrequent Access
+
+19 What is the primary advantage of Network Load Balancer (NLB) over other Elastic Load Balancers (ELB)? 
+Low latency and high throughput
+NLB offers low latency and high throughput, making it an ideal choice for applications that require constant high-speed connections such as gaming or real-time video streaming.
