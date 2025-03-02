@@ -83,3 +83,7 @@ S3 One Zone-Infrequent Access
 19 What is the primary advantage of Network Load Balancer (NLB) over other Elastic Load Balancers (ELB)? 
 Low latency and high throughput
 NLB offers low latency and high throughput, making it an ideal choice for applications that require constant high-speed connections such as gaming or real-time video streaming.
+
+
+20 Which Elastic Load Balancer (ELB) automatically scales resources in response to incoming traffic? 
+Auto Scaling Load Balancer (ASLB)
